@@ -1,0 +1,96 @@
+@import url("./frg-color-palette.css");
+@import url("./frg-typography.css");
+@import url("./frg-spacing.css");
+
+/* SCALE */
+:root {	--scale-100: 	4px;
+		--scale-200: 	8px;
+		--scale-300: 	12px;
+		--scale-400: 	16px;
+		--scale-500: 	20px;
+		--scale-600: 	24px;
+		--scale-700: 	28px;
+		--scale-800: 	32px;
+		--scale-900: 	40px;
+		--scale-1000: 	48px;
+		--scale-1100: 	56px;
+		--scale-1200: 	64px;
+		--scale-1300: 	80px;
+		--scale-1400: 	104px;
+		--scale-1500: 	120px;
+		--scale-1600: 	160px;
+}
+
+
+/* COLOR PALETTES */
+:root {
+	--color-base-primary: var(--color-primary-500);
+	--color-base-black: #0A0A0A;
+	--color-base-white: #FAFAFA;
+}
+
+/* NEUTRAL - Root Variables */
+:root {	--color-neutral-100: #EBEBEB;
+		--color-neutral-200: #E1E1E1;
+		--color-neutral-300: #CCCCCC;
+		--color-neutral-400: #ADADAD;
+		--color-neutral-500: #666666;
+		--color-neutral-600: #3D3D3D;
+		--color-neutral-700: #292929;
+		--color-neutral-800: #141414;
+}
+
+/* PRIMARY - Root Variables */
+:root {	--color-primary-100: #E6EAFF;
+		--color-primary-200: #BFCAFF;
+		--color-primary-300: #8095FF;
+		--color-primary-400: #405FFF;
+		--color-primary-500: #002AFF;
+		--color-primary-600: #0020BF;
+		--color-primary-700: #001580;
+		--color-primary-800: #001142;
+}
+
+/* DANGER - Root Variables */
+:root {	--color-danger-100: #FDD8DB;
+		--color-danger-200: #FAB3B9;
+		--color-danger-300: #F9778C;
+		--color-danger-400: #FB4B68;
+		--color-danger-500: #E60039;
+		--color-danger-600: #B00732;
+		--color-danger-700: #720823;
+		--color-danger-800: #380512;
+}
+
+/* SUCCESS - Root Variables */
+:root {	--color-success-100: #CFF2DC;
+		--color-success-200: #99EAB4;
+		--color-success-300: #68DE90;
+		--color-success-400: #1FE06F;
+		--color-success-500: #00CC55;
+		--color-success-600: #008537;
+		--color-success-700: #00521B;
+		--color-success-800: #00290E;
+}
+
+
+/* TYPOGRAPHY */
+:root {	--font-family-display: 'Unbounded', sans-serif;
+		--font-family-interface: 'Open Sans', sans-serif;
+		--font-style-italic: italic;
+		--font-style-regular: normal;
+		--font-weight-bold: 700;
+		--font-weight-regular: 400;
+}
+
+
+/* OTHERS */
+.border {
+	border-width: 1px;
+    border-style: solid;
+}
+.radius {
+	border-radius: 2px;
+}
+
+

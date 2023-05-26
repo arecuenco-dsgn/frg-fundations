@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRG - Fundation</title>
+
+    <link href="./css/frg-variables.css" rel="stylesheet" type="text/css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+        * { box-sizing: border-box; }
+
+        html{ scroll-behavior:smooth; }
+        
+        body {
+            color: var(--color-base-black);
+            background-color: var(--color-base-white);
+            padding: 40px 16px;
+            flex-wrap: nowrap;
+        }
+        main { 
+            width: 85%;
+            max-width: 1200px;
+        }
+
+        h1,h2,h3,h4,h5,h6,p {margin: 0px;}
+
+        .FlexColumn {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            align-content: flex-start;
+            overflow: auto;
+            flex-direction: column;
+        }
+        .FlexRow {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            align-content: flex-start;
+            overflow: auto;
+            flex-direction: row;
+        }
+        .width-100 {
+            width: 100%;
+        }
+        .swatch-box {
+            width: 136px;
+            height: auto;
+        }
+        .swatch {
+            width: 100%;
+            height: 80px;
+        }
+        .swatch-info, .type-info, .type-demo, .scale-info {
+            padding: var(--scale-200);
+        }
+        .scale-box {
+            min-width: 80px;
+            height: auto;
+        }
+        .scale-info {
+            position: absolute;
+        }
+        .scale {
+            width: 100%;
+            min-height: 240px;
+            aspect-ratio: 1/1;
+            padding: 40px;
+            justify-content: center;
+            align-content: center;
+        }
+        .scale .scale-demo { aspect-ratio: 1/1; }
+        #scale-demo-100 { height: var(--scale-100); }
+        #scale-demo-200 { height: var(--scale-200); }
+        #scale-demo-300 { height: var(--scale-300); }
+        #scale-demo-400 { height: var(--scale-400); }
+        #scale-demo-500 { height: var(--scale-500); }
+        #scale-demo-600 { height: var(--scale-600); }
+        #scale-demo-700 { height: var(--scale-700); }
+        #scale-demo-800 { height: var(--scale-800); }
+        #scale-demo-900 { height: var(--scale-900); }
+        #scale-demo-1000 { height: var(--scale-1000); }
+        #scale-demo-1100 { height: var(--scale-1100); }
+        #scale-demo-1200 { height: var(--scale-1200); }
+        #scale-demo-1300 { height: var(--scale-1300); }
+        #scale-demo-1400 { height: var(--scale-1400); }
+        #scale-demo-1500 { height: var(--scale-1500); }
+        #scale-demo-1600 { height: var(--scale-1600); }
+
+        .type-box {
+            width: 100%;
+            height: auto;
+        }
+        .type-demo {
+            padding: var(--scale-600) var(--scale-200);
+            min-height: 40px;
+            align-content: end;
+        }
+        nav {
+            width: 15%;
+            min-width: 104px;
+            max-width: 160px;
+            position: -webkit-sticky;
+            position: sticky;
+            right: 16px;
+            margin-top: 4px;
+            top: 40px;
+        }
+        nav .vertical-menu * {
+            text-decoration: none;
+            color: var(--color-neutral-500);
+        }
+        nav .vertical-menu h6 {
+            padding-top: var(--scale-200);
+        }
+        nav .vertical-menu a:hover {
+            color: var(--color-neutral-800);
+            font-weight: var(--font-weight-bold);
+        }
+        #c-neutral, #c-primary, #c-success, #c-danger, #f-display, #f-heading, #f-body {
+            scroll-margin-top: 100px;
+            padding-top: 24px;
+        }
+        .logo {
+            margin: 0px;
+            width: 100%;
+        }
+        .logo svg {
+            width: 80px;
+            aspect-ratio: 1/1;
+            margin-bottom: 48px;
+        }
+    </style>
+
+</head>
+<body id="top" class="FlexRow">
+
+    <nav class="FlexColumn space-gap-100">
+        <figure class="logo">
+            <a href="#top">
+                <svg viewBox="0 0 321 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.0246582" width="320" height="320" rx="2" fill="#002AFF"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M121.93 53.3333H68.5962V266.667H121.93V190.476H243.834V144.762H121.93V99.0475H251.453V53.3333H121.93Z" fill="#FAFAFA"/>
+                </svg>
+            </a>
+        </figure>
+        <h5 class="font-body-200-bold">Content</h5>
+        <div class="vertical-menu FlexColumn space-gap-100">
+            <h6 class="font-body-100-bold">Colors</h6>
+            <a class="font-body-100-regular"href="#c-neutral">Neutrals</a>
+            <a class="font-body-100-regular"href="#c-primary">Primary</a>
+            <a class="font-body-100-regular"href="#c-success">Success</a>
+            <a class="font-body-100-regular"href="#c-danger">Danger</a>
+            <h6 class="font-body-100-bold">Typography</h6>
+            <a class="font-body-100-regular"href="#f-display">Display</a>
+            <a class="font-body-100-regular"href="#f-heading">Heading</a>
+            <a class="font-body-100-regular"href="#f-body">Body</a>
+        </div>
+    </nav>
+    
+    <main class="FlexColumn space-gap-700">
+
+        <!-- COLOR PALETTE -->
+        <div class="FlexColumn space-gap-500">
+            <h2 class="font-heading-200">Base Palette</h3>
+            <!-- NEUTRAL COLORS -->
+            <div class="FlexColumn space-gap-400">
+                <h3 id="c-neutral" class="font-heading-100">Neutral Colors</h3>
+                <div class="FlexRow space-gap-300">
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-neutral-100"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">--color-neutral-100</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#EBEBEB</p>
+                        </div>
+                    </div>
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-neutral-200"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">--color-neutral-200</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#E1E1E1</p>
+                        </div>
+                    </div>
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-neutral-300"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">--color-neutral-300</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#CCCCCC</p>
+                        </div>
+                    </div>
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-neutral-400"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">--color-neutral-400</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#ADADAD</p>
+                        </div>
+                    </div>
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-neutral-500"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">--color-neutral-500</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#666666</p>
+                        </div>
+                    </div>
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-neutral-600"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">--color-neutral-600</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#3D3D3D</p>
+                        </div>
+                    </div>
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-neutral-700"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">--color-neutral-700</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#292929</p>
+                        </div>
+                    </div>
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-neutral-800"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">---color-neutral-800</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#141414</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- PRIMARY COLORS -->
+            <div class="FlexColumn space-gap-400">
+                <h3 id="c-primary" class="font-heading-100">Primary Colors</h3>
+                <div class="FlexRow space-gap-300">
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-primary-100"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">--color-primary-100</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#E6EAFF</p>
+                        </div>
+                    </div>
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-primary-200"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">--color-primary-200</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#BFCAFF</p>
+                        </div>
+                    </div>
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-primary-300"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">--color-primary-300</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#8095FF</p>
+                        </div>
+                    </div>
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-primary-400"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">--color-primary-400</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#405FFF</p>
+                        </div>
+                    </div>
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-primary-500"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">--color-primary-500</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#002AFF</p>
+                        </div>
+                    </div>
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-primary-600"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">--color-primary-600</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#0020BF</p>
+                        </div>
+                    </div>
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-primary-700"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">--color-primary-700</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#001580</p>
+                        </div>
+                    </div>
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-primary-800"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">---colorprimaryl-800</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#001142</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- SUCCESS COLORS -->
+            <div class="FlexColumn space-gap-400">
+                <h3 id="c-success" class="font-heading-100">Success Colors</h3>
+                <div class="FlexRow space-gap-300">
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-success-100"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">--color-success-100</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#CFF2DC</p>
+                        </div>
+                    </div>
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-success-200"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">--color-success-200</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#99EAB4</p>
+                        </div>
+                    </div>
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-success-300"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">--color-success-300</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#68DE90</p>
+                        </div>
+                    </div>
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-success-400"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">--color-success-400</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#1FE06F</p>
+                        </div>
+                    </div>
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-success-500"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">--color-success-500</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#00CC55</p>
+                        </div>
+                    </div>
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-success-600"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">--color-success-600</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#008537</p>
+                        </div>
+                    </div>
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-success-700"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">--color-success-700</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#00521B</p>
+                        </div>
+                    </div>
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-success-800"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">---color-success-800</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#00290E</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- DANGER COLORS -->
+            <div class="FlexColumn space-gap-400">
+                <h3 id="c-danger" class="font-heading-100">Danger Colors</h3>
+                <div class="FlexRow space-gap-300">
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-danger-100"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">--color-danger-100</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#FDD8DB</p>
+                        </div>
+                    </div>
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-danger-200"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">--color-danger-200</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#FAB3B9</p>
+                        </div>
+                    </div>
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-danger-300"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">--color-danger-300</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#F9778C</p>
+                        </div>
+                    </div>
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-danger-400"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">--color-danger-400</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#FB4B68</p>
+                        </div>
+                    </div>
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-danger-500"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">--color-danger-500</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#E60039</p>
+                        </div>
+                    </div>
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-danger-600"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">--color-danger-600</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#B00732</p>
+                        </div>
+                    </div>
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-danger-700"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">--color-danger-700</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#720823</p>
+                        </div>
+                    </div>
+                    <div class="swatch-box FlexColumn border radius color-border-neutral-100">
+                        <div class="swatch color-bg-danger-800"></div>
+                        <div class="swatch-info FlexColumn">
+                            <h5 class="font-body-100-regular">---color-danger-800</h5>
+                            <p class="font-body-100-regular color-type-neutral-400">#380512</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TYPOGRAPHY -->
+        <div class="FlexColumn width-100 space-gap-500">
+            <h2 class="font-heading-200">Base Typography</h3>
+            <!-- DISPLAY -->
+            <div class="FlexColumn width-100 space-gap-300">
+                <h3 id="f-display" class="font-heading-100">Display</h3>
+                <div class="FlexColumn width-100 space-gap-300">
+                    <!-- DISPLAY 300 -->
+                    <div class="type-box FlexColumn border radius color-border-neutral-100">
+                        <div class="type-demo FlexRow font-display-300">The quick brown fox jumps over the lazy dog </div>
+                        <div class="type-info FlexColumn">
+                            <h5 class="font-body-100-regular">.font-display-300</h5>
+                        </div>
+                    </div>
+                    <!-- DISPLAY 200 -->
+                    <div class="type-box FlexColumn border radius color-border-neutral-100">
+                        <div class="type-demo FlexRow font-display-200">The quick brown fox jumps over the lazy dog </div>
+                        <div class="type-info FlexColumn">
+                            <h5 class="font-body-100-regular">.font-display-200</h5>
+                        </div>
+                    </div>
+                    <!-- DISPLAY 100 -->
+                    <div class="type-box FlexColumn border radius color-border-neutral-100">
+                        <div class="type-demo FlexRow font-display-100">The quick brown fox jumps over the lazy dog </div>
+                        <div class="type-info FlexColumn">
+                            <h5 class="font-body-100-regular">.font-display-100</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- HEADING -->
+            <div class="FlexColumn width-100 space-gap-300">
+                <h3 id="f-heading" class="font-heading-100">Heading</h3>
+                <div class="FlexColumn width-100 space-gap-300">
+                    <!-- HEADING 600 -->
+                    <div class="type-box FlexColumn border radius color-border-neutral-100">
+                        <div class="type-demo FlexRow font-heading-600">The quick brown fox jumps over the lazy dog </div>
+                        <div class="type-info FlexColumn">
+                            <h5 class="font-body-100-regular">.font-heading-600</h5>
+                        </div>
+                    </div>
+                    <!-- HEADING 500 -->
+                    <div class="type-box FlexColumn border radius color-border-neutral-100">
+                        <div class="type-demo FlexRow font-heading-500">The quick brown fox jumps over the lazy dog </div>
+                        <div class="type-info FlexColumn">
+                            <h5 class="font-body-100-regular">.font-heading-500</h5>
+                        </div>
+                    </div>
+                    <!-- HEADING 400 -->
+                    <div class="type-box FlexColumn border radius color-border-neutral-100">
+                        <div class="type-demo FlexRow font-heading-400">The quick brown fox jumps over the lazy dog </div>
+                        <div class="type-info FlexColumn">
+                            <h5 class="font-body-100-regular">.font-heading-400</h5>
+                        </div>
+                    </div>
+                    <!-- HEADING 300 -->
+                    <div class="type-box FlexColumn border radius color-border-neutral-100">
+                        <div class="type-demo FlexRow font-heading-300">The quick brown fox jumps over the lazy dog </div>
+                        <div class="type-info FlexColumn">
+                            <h5 class="font-body-100-regular">.font-heading-300</h5>
+                        </div>
+                    </div>
+                    <!-- HEADING 200 -->
+                    <div class="type-box FlexColumn border radius color-border-neutral-100">
+                        <div class="type-demo FlexRow font-heading-200">The quick brown fox jumps over the lazy dog </div>
+                        <div class="type-info FlexColumn">
+                            <h5 class="font-body-100-regular">.font-heading-200</h5>
+                        </div>
+                    </div>
+                    <!-- HEADING 100 -->
+                    <div class="type-box FlexColumn border radius color-border-neutral-100">
+                        <div class="type-demo FlexRow font-heading-100">The quick brown fox jumps over the lazy dog </div>
+                        <div class="type-info FlexColumn">
+                            <h5 class="font-body-100-regular">.font-heading-100</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- BODY CONTENT -->
+            <div class="FlexColumn width-100 space-gap-300">
+                <h3 id="f-body" class="font-heading-100">Body Content</h3>
+                <div class="FlexColumn width-100 space-gap-300">
+                    <!-- BODY 100 BOLD -->
+                    <div class="type-box FlexColumn border radius color-border-neutral-100">
+                        <div class="type-demo FlexRow font-body-300-bold">The quick brown fox jumps over the lazy dog </div>
+                        <div class="type-info FlexColumn">
+                            <h5 class="font-body-100-regular">.font-body-300-bold</h5>
+                        </div>
+                    </div>
+                    <!-- BODY 100 REGULAR -->
+                    <div class="type-box FlexColumn border radius color-border-neutral-100">
+                        <div class="type-demo FlexRow font-body-300-regular">The quick brown fox jumps over the lazy dog </div>
+                        <div class="type-info FlexColumn">
+                            <h5 class="font-body-100-regular">.font-body-300-regular</h5>
+                        </div>
+                    </div>
+                    <!-- BODY 100 BOLD ITALIC -->
+                    <div class="type-box FlexColumn border radius color-border-neutral-100">
+                        <div class="type-demo FlexRow font-body-300-bold_italic">The quick brown fox jumps over the lazy dog </div>
+                        <div class="type-info FlexColumn">
+                            <h5 class="font-body-100-regular">.font-body-300-body_italic</h5>
+                        </div>
+                    </div>
+                    <!-- BODY 100 ITALIC -->
+                    <div class="type-box FlexColumn border radius color-border-neutral-100">
+                        <div class="type-demo FlexRow font-body-300-italic">The quick brown fox jumps over the lazy dog </div>
+                        <div class="type-info FlexColumn">
+                            <h5 class="font-body-100-regular">.font-body-300-italic</h5>
+                        </div>
+                    </div>
+                    <!-- BODY 200 BOLD -->
+                    <div class="type-box FlexColumn border radius color-border-neutral-100">
+                        <div class="type-demo FlexRow font-body-200-bold">The quick brown fox jumps over the lazy dog </div>
+                        <div class="type-info FlexColumn">
+                            <h5 class="font-body-100-regular">.font-body-200-bold</h5>
+                        </div>
+                    </div>
+                    <!-- BODY 200 REGULAR -->
+                    <div class="type-box FlexColumn border radius color-border-neutral-100">
+                        <div class="type-demo FlexRow font-body-200-regular">The quick brown fox jumps over the lazy dog </div>
+                        <div class="type-info FlexColumn">
+                            <h5 class="font-body-100-regular">.font-body-200-regular</h5>
+                        </div>
+                    </div>
+                    <!-- BODY 200 BOLD ITALIC -->
+                    <div class="type-box FlexColumn border radius color-border-neutral-100">
+                        <div class="type-demo FlexRow font-body-200-bold_italic">The quick brown fox jumps over the lazy dog </div>
+                        <div class="type-info FlexColumn">
+                            <h5 class="font-body-100-regular">.font-body-200-bold_italic</h5>
+                        </div>
+                    </div>
+                    <!-- BODY 200 ITALIC -->
+                    <div class="type-box FlexColumn border radius color-border-neutral-100">
+                        <div class="type-demo FlexRow font-body-200-italic">The quick brown fox jumps over the lazy dog </div>
+                        <div class="type-info FlexColumn">
+                            <h5 class="font-body-100-regular">.font-body-200-italic</h5>
+                        </div>
+                    </div>
+                    <!-- BODY 100 BOLD -->
+                    <div class="type-box FlexColumn border radius color-border-neutral-100">
+                        <div class="type-demo FlexRow font-body-100-bold">The quick brown fox jumps over the lazy dog </div>
+                        <div class="type-info FlexColumn">
+                            <h5 class="font-body-100-regular">.font-body-100-bold</h5>
+                        </div>
+                    </div>
+                    <!-- BODY 100 REGULAR -->
+                    <div class="type-box FlexColumn border radius color-border-neutral-100">
+                        <div class="type-demo FlexRow font-body-100-regular">The quick brown fox jumps over the lazy dog </div>
+                        <div class="type-info FlexColumn">
+                            <h5 class="font-body-100-regular">.font-body-100-regular</h5>
+                        </div>
+                    </div>
+                    <!-- BODY 100 BOLD ITALIC -->
+                    <div class="type-box FlexColumn border radius color-border-neutral-100">
+                        <div class="type-demo FlexRow font-body-100-bold_italic">The quick brown fox jumps over the lazy dog </div>
+                        <div class="type-info FlexColumn">
+                            <h5 class="font-body-100-regular">.font-body-100-bold_italic</h5>
+                        </div>
+                    </div>
+                    <!-- BODY 100 ITALIC -->
+                    <div class="type-box FlexColumn border radius color-border-neutral-100">
+                        <div class="type-demo FlexRow font-body-100-italic">The quick brown fox jumps over the lazy dog </div>
+                        <div class="type-info FlexColumn">
+                            <h5 class="font-body-100-regular">.font-body-100-italic</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                <!-- COLOR PALETTE -->
+                <div class="FlexColumn space-gap-500">
+                    <h2 class="font-heading-200">Base Palette</h3>
+                    <!-- NEUTRAL COLORS -->
+                    <div class="FlexColumn space-gap-400">
+                        <h3 id="c-neutral" class="font-heading-100">Neutral Colors</h3>
+                        <div class="FlexRow space-gap-300">
+                            <!-- SPACE 100 -->
+                            <div class="scale-box FlexColumn border radius color-border-neutral-100">
+                                <div class="FlexRow scale color-bg-neutral-100">
+                                    <div id="scale-demo-100" class="scale-demo color-bg-danger-300 color-border-danger-500"></div>
+                                </div>
+                                <div class="scale-info FlexRow space-gap-200">
+                                    <h5 class="font-body-100-regular">--scale-100</h5>
+                                    <p class="font-body-100-regular">4px</p>
+                                </div>
+                            </div>
+                            <!-- SPACE 200 -->
+                            <div class="scale-box FlexColumn border radius color-border-neutral-100">
+                                <div class="FlexRow scale color-bg-neutral-100">
+                                    <div id="scale-demo-200" class="scale-demo color-bg-danger-300 color-border-danger-500"></div>
+                                </div>
+                                <div class="scale-info FlexRow space-gap-200">
+                                    <h5 class="font-body-100-regular">--scale-200</h5>
+                                    <p class="font-body-100-regular">8px</p>
+                                </div>
+                            </div>
+                            <!-- SPACE 300 -->
+                            <div class="scale-box FlexColumn border radius color-border-neutral-100">
+                                <div class="FlexRow scale color-bg-neutral-100">
+                                    <div id="scale-demo-300" class="scale-demo color-bg-danger-300 color-border-danger-500"></div>
+                                </div>
+                                <div class="scale-info FlexRow space-gap-200">
+                                    <h5 class="font-body-100-regular">--scale-300</h5>
+                                    <p class="font-body-100-regular">12px</p>
+                                </div>
+                            </div>
+                            <!-- SPACE 400 -->
+                            <div class="scale-box FlexColumn border radius color-border-neutral-100">
+                                <div class="FlexRow scale color-bg-neutral-100">
+                                    <div id="scale-demo-400" class="scale-demo color-bg-danger-300 color-border-danger-500"></div>
+                                </div>
+                                <div class="scale-info FlexRow space-gap-200">
+                                    <h5 class="font-body-100-regular">--scale-400</h5>
+                                    <p class="font-body-100-regular">16px</p>
+                                </div>
+                            </div>
+                            <!-- SPACE 500 -->
+                            <div class="scale-box FlexColumn border radius color-border-neutral-100">
+                                <div class="FlexRow scale color-bg-neutral-100">
+                                    <div id="scale-demo-500" class="scale-demo color-bg-danger-300 color-border-danger-500"></div>
+                                </div>
+                                <div class="scale-info FlexRow space-gap-200">
+                                    <h5 class="font-body-100-regular">--scale-500</h5>
+                                    <p class="font-body-100-regular">20px</p>
+                                </div>
+                            </div>
+                            <!-- SPACE 600 -->
+                            <div class="scale-box FlexColumn border radius color-border-neutral-100">
+                                <div class="FlexRow scale color-bg-neutral-100">
+                                    <div id="scale-demo-600" class="scale-demo color-bg-danger-300 color-border-danger-500"></div>
+                                </div>
+                                <div class="scale-info FlexRow space-gap-200">
+                                    <h5 class="font-body-100-regular">--scale-600</h5>
+                                    <p class="font-body-100-regular">24px</p>
+                                </div>
+                            </div>
+                            <!-- SPACE 700 -->
+                            <div class="scale-box FlexColumn border radius color-border-neutral-100">
+                                <div class="FlexRow scale color-bg-neutral-100">
+                                    <div id="scale-demo-700" class="scale-demo color-bg-danger-300 color-border-danger-500"></div>
+                                </div>
+                                <div class="scale-info FlexRow space-gap-200">
+                                    <h5 class="font-body-100-regular">--scale-700</h5>
+                                    <p class="font-body-100-regular">28px</p>
+                                </div>
+                            </div>
+                            <!-- SPACE 800 -->
+                            <div class="scale-box FlexColumn border radius color-border-neutral-100">
+                                <div class="FlexRow scale color-bg-neutral-100">
+                                    <div id="scale-demo-800" class="scale-demo color-bg-danger-300 color-border-danger-500"></div>
+                                </div>
+                                <div class="scale-info FlexRow space-gap-200">
+                                    <h5 class="font-body-100-regular">--scale-800</h5>
+                                    <p class="font-body-100-regular">32px</p>
+                                </div>
+                            </div>
+                            <!-- SPACE 900 -->
+                            <div class="scale-box FlexColumn border radius color-border-neutral-100">
+                                <div class="FlexRow scale color-bg-neutral-100">
+                                    <div id="scale-demo-900" class="scale-demo color-bg-danger-300 color-border-danger-500"></div>
+                                </div>
+                                <div class="scale-info FlexRow space-gap-200">
+                                    <h5 class="font-body-100-regular">--scale-900</h5>
+                                    <p class="font-body-100-regular">40px</p>
+                                </div>
+                            </div>
+                            <!-- SPACE 1000 -->
+                            <div class="scale-box FlexColumn border radius color-border-neutral-100">
+                                <div class="FlexRow scale color-bg-neutral-100">
+                                    <div id="scale-demo-1000" class="scale-demo color-bg-danger-300 color-border-danger-500"></div>
+                                </div>
+                                <div class="scale-info FlexRow space-gap-200">
+                                    <h5 class="font-body-100-regular">--scale-1000</h5>
+                                    <p class="font-body-100-regular">48px</p>
+                                </div>
+                            </div>
+                            <!-- SPACE 1100 -->
+                            <div class="scale-box FlexColumn border radius color-border-neutral-100">
+                                <div class="FlexRow scale color-bg-neutral-100">
+                                    <div id="scale-demo-1100" class="scale-demo color-bg-danger-300 color-border-danger-500"></div>
+                                </div>
+                                <div class="scale-info FlexRow space-gap-200">
+                                    <h5 class="font-body-100-regular">--scale-1100</h5>
+                                    <p class="font-body-100-regular">56px</p>
+                                </div>
+                            </div>
+                            <!-- SPACE 1200 -->
+                            <div class="scale-box FlexColumn border radius color-border-neutral-100">
+                                <div class="FlexRow scale color-bg-neutral-100">
+                                    <div id="scale-demo-1200" class="scale-demo color-bg-danger-300 color-border-danger-500"></div>
+                                </div>
+                                <div class="scale-info FlexRow space-gap-200">
+                                    <h5 class="font-body-100-regular">--scale-1200</h5>
+                                    <p class="font-body-100-regular">64px</p>
+                                </div>
+                            </div>
+                            <!-- SPACE 1300 -->
+                            <div class="scale-box FlexColumn border radius color-border-neutral-100">
+                                <div class="FlexRow scale color-bg-neutral-100">
+                                    <div id="scale-demo-1300" class="scale-demo color-bg-danger-300 color-border-danger-500"></div>
+                                </div>
+                                <div class="scale-info FlexRow space-gap-200">
+                                    <h5 class="font-body-100-regular">--scale-1300</h5>
+                                    <p class="font-body-100-regular">80px</p>
+                                </div>
+                            </div>
+                            <!-- SPACE 1400 -->
+                            <div class="scale-box FlexColumn border radius color-border-neutral-100">
+                                <div class="FlexRow scale color-bg-neutral-100">
+                                    <div id="scale-demo-1400" class="scale-demo color-bg-danger-300 color-border-danger-500"></div>
+                                </div>
+                                <div class="scale-info FlexRow space-gap-200">
+                                    <h5 class="font-body-100-regular">--scale-1400</h5>
+                                    <p class="font-body-100-regular">104px</p>
+                                </div>
+                            </div>
+                            <!-- SPACE 1500 -->
+                            <div class="scale-box FlexColumn border radius color-border-neutral-100">
+                                <div class="FlexRow scale color-bg-neutral-100">
+                                    <div id="scale-demo-1500" class="scale-demo color-bg-danger-300 color-border-danger-500"></div>
+                                </div>
+                                <div class="scale-info FlexRow space-gap-200">
+                                    <h5 class="font-body-100-regular">--scale-1500</h5>
+                                    <p class="font-body-100-regular">120px</p>
+                                </div>
+                            </div>
+                            <!-- SPACE 1600 -->
+                            <div class="scale-box FlexColumn border radius color-border-neutral-100">
+                                <div class="FlexRow scale color-bg-neutral-100">
+                                    <div id="scale-demo-1600" class="scale-demo color-bg-danger-300 color-border-danger-500"></div>
+                                </div>
+                                <div class="scale-info FlexRow space-gap-200">
+                                    <h5 class="font-body-100-regular">--scale-1600</h5>
+                                    <p class="font-body-100-regular">160px</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    </main>
+
+</body>
+</html>

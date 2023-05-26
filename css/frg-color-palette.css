@@ -1,0 +1,139 @@
+
+
+
+/* NEUTRAL COLORS */
+
+/* NEUTRAL - Background colors Classes */
+.color-bg-neutral-100 { background-color: var(--color-neutral-100); }
+.color-bg-neutral-200 { background-color: var(--color-neutral-200); }
+.color-bg-neutral-300 { background-color: var(--color-neutral-300); }
+.color-bg-neutral-400 { background-color: var(--color-neutral-400); }
+.color-bg-neutral-500 { background-color: var(--color-neutral-500); }
+.color-bg-neutral-600 { background-color: var(--color-neutral-600); }
+.color-bg-neutral-700 { background-color: var(--color-neutral-700); }
+.color-bg-neutral-800 { background-color: var(--color-neutral-800); }
+
+/* NEUTRAL - Text colors Classes */
+.color-type-neutral-100 { color: var(--color-neutral-100); }
+.color-type-neutral-200 { color: var(--color-neutral-200); }
+.color-type-neutral-300 { color: var(--color-neutral-300); }
+.color-type-neutral-400 { color: var(--color-neutral-400); }
+.color-type-neutral-500 { color: var(--color-neutral-500); }
+.color-type-neutral-600 { color: var(--color-neutral-600); }
+.color-type-neutral-700 { color: var(--color-neutral-800); }
+.color-type-neutral-800 { color: var(--color-neutral-800); }
+
+/* NEUTRAL - Border colors Classes */
+.color-border-neutral-100 { border-color: var(--color-neutral-100); }
+.color-border-neutral-200 { border-color: var(--color-neutral-200); }
+.color-border-neutral-300 { border-color: var(--color-neutral-300); }
+.color-border-neutral-400 { border-color: var(--color-neutral-400); }
+.color-border-neutral-500 { border-color: var(--color-neutral-500); }
+.color-border-neutral-600 { border-color: var(--color-neutral-600); }
+.color-border-neutral-700 { border-color: var(--color-neutral-800); }
+.color-border-neutral-800 { border-color: var(--color-neutral-800); }
+
+
+
+
+/* PRIMARY COLORS */
+
+/* PRIMARY - Background colors Classes */
+.color-bg-primary-100 { background-color: var(--color-primary-100); }
+.color-bg-primary-200 { background-color: var(--color-primary-200); }
+.color-bg-primary-300 { background-color: var(--color-primary-300); }
+.color-bg-primary-400 { background-color: var(--color-primary-400); }
+.color-bg-primary-500 { background-color: var(--color-primary-500); }
+.color-bg-primary-600 { background-color: var(--color-primary-600); }
+.color-bg-primary-700 { background-color: var(--color-primary-700); }
+.color-bg-primary-800 { background-color: var(--color-primary-800); }
+
+/* PRIMARY - Text colors Classes */
+.color-type-primary-100 { color: var(--color-primary-100); }
+.color-type-primary-200 { color: var(--color-primary-200); }
+.color-type-primary-300 { color: var(--color-primary-300); }
+.color-type-primary-400 { color: var(--color-primary-400); }
+.color-type-primary-500 { color: var(--color-primary-500); }
+.color-type-primary-600 { color: var(--color-primary-600); }
+.color-type-primary-700 { color: var(--color-primary-800); }
+.color-type-primary-800 { color: var(--color-primary-800); }
+
+/* PRIMARY - Border colors Classes */
+.color-border-primary-100 { border-color: var(--color-primary-100); }
+.color-border-primary-200 { border-color: var(--color-primary-200); }
+.color-border-primary-300 { border-color: var(--color-primary-300); }
+.color-border-primary-400 { border-color: var(--color-primary-400); }
+.color-border-primary-500 { border-color: var(--color-primary-500); }
+.color-border-primary-600 { border-color: var(--color-primary-600); }
+.color-border-primary-700 { border-color: var(--color-primary-800); }
+.color-border-primary-800 { border-color: var(--color-primary-800); }
+
+
+
+
+/* DANGER COLORS */
+
+/* DANGER - Background colors Classes */
+.color-bg-danger-100 { background-color: var(--color-danger-100); }
+.color-bg-danger-200 { background-color: var(--color-danger-200); }
+.color-bg-danger-300 { background-color: var(--color-danger-300); }
+.color-bg-danger-400 { background-color: var(--color-danger-400); }
+.color-bg-danger-500 { background-color: var(--color-danger-500); }
+.color-bg-danger-600 { background-color: var(--color-danger-600); }
+.color-bg-danger-700 { background-color: var(--color-danger-700); }
+.color-bg-danger-800 { background-color: var(--color-danger-800); }
+
+/* DANGER - Text colors Classes */
+.color-type-danger-100 { color: var(--color-danger-100); }
+.color-type-danger-200 { color: var(--color-danger-200); }
+.color-type-danger-300 { color: var(--color-danger-300); }
+.color-type-danger-400 { color: var(--color-danger-400); }
+.color-type-danger-500 { color: var(--color-danger-500); }
+.color-type-danger-600 { color: var(--color-danger-600); }
+.color-type-danger-700 { color: var(--color-danger-800); }
+.color-type-danger-800 { color: var(--color-danger-800); }
+
+/* DANGER - Border colors Classes */
+.color-border-danger-100 { border-color: var(--color-danger-100); }
+.color-border-danger-200 { border-color: var(--color-danger-200); }
+.color-border-danger-300 { border-color: var(--color-danger-300); }
+.color-border-danger-400 { border-color: var(--color-danger-400); }
+.color-border-danger-500 { border-color: var(--color-danger-500); }
+.color-border-danger-600 { border-color: var(--color-danger-600); }
+.color-border-danger-700 { border-color: var(--color-danger-800); }
+.color-border-danger-800 { border-color: var(--color-danger-800); }
+
+
+
+
+/* SUCCESS COLORS */
+
+/* SUCCESS - Background colors Classes */
+.color-bg-success-100 { background-color: var(--color-success-100); }
+.color-bg-success-200 { background-color: var(--color-success-200); }
+.color-bg-success-300 { background-color: var(--color-success-300); }
+.color-bg-success-400 { background-color: var(--color-success-400); }
+.color-bg-success-500 { background-color: var(--color-success-500); }
+.color-bg-success-600 { background-color: var(--color-success-600); }
+.color-bg-success-700 { background-color: var(--color-success-700); }
+.color-bg-success-800 { background-color: var(--color-success-800); }
+
+/* SUCCESS - Text colors Classes */
+.color-type-success-100 { color: var(--color-success-100); }
+.color-type-success-200 { color: var(--color-success-200); }
+.color-type-success-300 { color: var(--color-success-300); }
+.color-type-success-400 { color: var(--color-success-400); }
+.color-type-success-500 { color: var(--color-success-500); }
+.color-type-success-600 { color: var(--color-success-600); }
+.color-type-success-700 { color: var(--color-success-800); }
+.color-type-success-800 { color: var(--color-success-800); }
+
+/* SUCCESS - Border colors Classes */
+.color-border-success-100 { border-color: var(--color-success-100); }
+.color-border-success-200 { border-color: var(--color-success-200); }
+.color-border-success-300 { border-color: var(--color-success-300); }
+.color-border-success-400 { border-color: var(--color-success-400); }
+.color-border-success-500 { border-color: var(--color-success-500); }
+.color-border-success-600 { border-color: var(--color-success-600); }
+.color-border-success-700 { border-color: var(--color-success-800); }
+.color-border-success-800 { border-color: var(--color-success-800); }

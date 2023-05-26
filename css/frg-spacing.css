@@ -1,0 +1,13 @@
+
+
+
+/* SPACING */
+
+/* NEUTRAL - Background colors Classes */
+.space-gap-100 { gap: var(--scale-100); }
+.space-gap-200 { gap: var(--scale-200); }
+.space-gap-300 { gap: var(--scale-400); }
+.space-gap-400 { gap: var(--scale-600); }
+.space-gap-500 { gap: var(--scale-900); }
+.space-gap-600 { gap: var(--scale-1300); }
+.space-gap-700 { gap: var(--scale-1500); }
